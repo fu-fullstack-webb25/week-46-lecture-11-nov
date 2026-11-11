@@ -31,8 +31,8 @@ export const loginUser = async (data : LoginBody) : Promise<LoginResponse> => {
     headers : {
       "Content-Type" : "application/json"
     },
-    credentials : "include",
-    body : JSON.stringify(data)
+    body : JSON.stringify(data),
+    credentials : 'include'
   });
 
   if (!response.ok) {
@@ -48,7 +48,7 @@ export const fetchProducts = async () : Promise<ProductResponse[]> => {
 		headers : {
 			"Content-Type" : "application/json"
 		},
-		credentials : "include"
+    credentials : 'include'
 	});
 	
 	if (!response.ok) {
